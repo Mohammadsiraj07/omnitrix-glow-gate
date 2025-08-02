@@ -1,3 +1,4 @@
+// Omnitrix Hero Landing Page
 import HeroSection from '@/components/HeroSection';
 
 const Index = () => {
