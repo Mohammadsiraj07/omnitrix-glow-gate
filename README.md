@@ -1,18 +1,4 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/1701eec7-a10c-451c-af65-a3eb4a652aaf
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/1701eec7-a10c-451c-af65-a3eb4a652aaf) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+##Omnitrix
 
 **Use your preferred IDE**
 
