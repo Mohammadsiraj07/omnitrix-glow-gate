@@ -117,7 +117,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-mono overflow-x-hidden;
+    @apply text-foreground font-mono overflow-x-hidden;
+    background: 
+      radial-gradient(ellipse at top, rgba(0, 255, 65, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at center, rgba(0, 255, 65, 0.05) 0%, transparent 70%),
+      linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0f0f0f 50%, #1a1a1a 75%, #0a0a0a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   
   /* Custom glow classes */
@@ -136,14 +143,79 @@ All colors MUST be HSL.
   /* Hero title styling */
   .hero-title {
     font-family: 'Orbitron', 'Inter', monospace;
-    font-weight: 700;
-    letter-spacing: 0.2em;
+    font-weight: 800;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    background: linear-gradient(135deg, #00ff41, #00cc33, #00ff41);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: var(--text-glow);
+    animation: neon-glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Enhanced neon glow animation */
+  @keyframes neon-glow {
+    from {
+      text-shadow: 
+        0 0 5px #00ff41,
+        0 0 10px #00ff41,
+        0 0 15px #00ff41,
+        0 0 20px #00ff41,
+        0 0 35px #00ff41,
+        0 0 40px #00ff41;
+    }
+    to {
+      text-shadow: 
+        0 0 2px #00ff41,
+        0 0 8px #00ff41,
+        0 0 12px #00ff41,
+        0 0 16px #00ff41,
+        0 0 25px #00ff41,
+        0 0 30px #00ff41;
+    }
+  }
+  
+  /* Container glow effect */
+  .hero-container {
+    box-shadow: 
+      0 0 50px rgba(0, 255, 65, 0.1),
+      0 0 100px rgba(0, 255, 65, 0.05),
+      inset 0 0 50px rgba(0, 255, 65, 0.02);
+  }
+  
+  /* Global dark neon gradient background */
+  html {
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(0, 255, 65, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 255, 65, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.06) 0%, transparent 50%),
+      linear-gradient(135deg, #050505 0%, #0f0f0f 25%, #1a1a1a 50%, #0f0f0f 75%, #050505 100%);
+    background-attachment: fixed;
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  }
+  
+  /* Animated background glow */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 65, 0.08), transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+    animation: background-pulse 8s ease-in-out infinite;
+  }
+  
+  @keyframes background-pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
   }
   
   /* Video background */

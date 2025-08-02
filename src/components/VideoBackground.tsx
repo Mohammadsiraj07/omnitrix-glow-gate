@@ -18,21 +18,18 @@ const VideoBackground = ({ src, className = "" }: VideoBackgroundProps) => {
   }, []);
 
   return (
-    <>
-      <video
-        ref={videoRef}
-        className={`video-background ${className}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        <source src={src} type="video/mp4" />
-        <div className="absolute inset-0 bg-omnitrix-dark" />
-      </video>
-      <div className="video-overlay" />
-    </>
+    <video
+      ref={videoRef}
+      className={`absolute inset-0 w-full h-full object-cover rounded-3xl ${className}`}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    >
+      <source src={src} type="video/mp4" />
+      <div className="absolute inset-0 bg-omnitrix-dark rounded-3xl" />
+    </video>
   );
 };
 
