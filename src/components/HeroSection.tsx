@@ -4,18 +4,18 @@ import ScrollIndicator from './ScrollIndicator';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center overflow-hidden pb-32">
       {/* Video Background */}
       <VideoBackground src="/omnitrix-reveal.mp4" />
       
-      {/* Hero Content */}
+      {/* Hero Content - Positioned at bottom */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         {/* Main Title */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="hero-title text-6xl md:text-8xl lg:text-9xl mb-6 animate-text-glow"
+          className="hero-title text-5xl md:text-7xl lg:text-8xl mb-4 animate-text-glow"
         >
           THE OMNITRIX
         </motion.h1>
@@ -25,7 +25,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-xl md:text-2xl lg:text-3xl text-foreground/90 font-mono font-light tracking-wide mb-8"
+          className="text-lg md:text-xl lg:text-2xl text-foreground/90 font-mono font-light tracking-wide mb-6"
         >
           Unleash the Power Within
         </motion.p>
@@ -35,7 +35,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
-          className="w-32 h-px bg-primary mx-auto mb-8 box-glow-subtle"
+          className="w-24 h-px bg-primary mx-auto mb-6 box-glow-subtle"
         />
         
         {/* Secondary Text */}
