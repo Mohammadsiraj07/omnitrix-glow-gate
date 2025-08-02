@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from '@/components/HeroSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="relative">
+      <HeroSection />
+      
+      {/* Additional content sections can be added here */}
+      <section className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-3xl font-orbitron text-primary mb-4">
+            More Content Coming Soon
+          </h2>
+          <p className="text-muted-foreground font-mono">
+            The journey continues...
+          </p>
+        </div>
+      </section>
+    </main>
   );
 };
 
